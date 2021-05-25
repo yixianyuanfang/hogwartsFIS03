@@ -1,0 +1,46 @@
+# 列表['a','b','c','d']
+#- 'a e f'
+#- 'b x y'
+#- c
+#- d
+#- ~ # 代表 None
+
+# 字典 嵌套列表， 字典嵌套字典
+#languages:
+#  - Ruby
+#  - Perl
+#  - Python
+#websites:
+#  YAML: yaml.org
+#  Ruby: ruby-lang.org
+#  Python: python.org
+#  Perl: use.perl.org
+
+# 列表嵌套列表，列表嵌套字典
+# [[1,2],[3,4],[5,6]]
+#- [1,2]
+#- [3,4]
+#-
+#  - 5
+#  - 6
+#-
+#  {'key': "value"}
+
+#- &showell Steve
+#- &mydefault Clark
+#- Brian
+#- Oren
+#- *showell
+#- *mydefault
+
+defaults: &defaults
+  adapter: postgres
+  host: localhost
+
+development:
+  database: myapp_development
+  <<: *defaults
+
+test:
+  database: myapp_test
+  <<: *defaults

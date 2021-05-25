@@ -1,3 +1,6 @@
+import yaml
+
+
 class Bicycle:
     def run(self, km):
         print(f"健康环保，骑行里程数为：{km}")
@@ -22,6 +25,15 @@ class EBicycle(Bicycle):
 
 
 if __name__ == '__main__':
-    eb = EBicycle(10)
-    eb.fill_charge(10)
-    eb.run(201)
+    with open("bicycle_config.yml") as f:
+        datas = yaml.safe_load(f)
+    # print(datas['default'])
+    battery_level = datas['default']['battery_level']
+    run_km = datas['default']['run_km']
+
+    eb = EBicycle(battery_level)
+    eb.run(run_km)
+
+    # eb = EBicycle(10)
+    # eb.fill_charge(10)
+    # eb.run(201)
