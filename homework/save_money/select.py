@@ -1,4 +1,4 @@
-import money
+from save_money import money
 
 
 def select_money():

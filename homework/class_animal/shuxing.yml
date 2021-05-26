@@ -1,0 +1,16 @@
+cat:
+  name: "凯蒂"
+  color: "白色"
+  age: 5
+  gender: "女"
+  hair: "短发"
+
+dog:
+  name: "八公"
+  color: "黄色"
+  age: 10
+  gender: "男"
+  hair: "长发"
+
+#default:
+#  <<: *dog
