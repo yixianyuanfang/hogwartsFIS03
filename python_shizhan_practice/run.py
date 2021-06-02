@@ -1,4 +1,4 @@
-from python_pratice.sendgift import send, show
+from python_shizhan_practice.sendgift import send, show
 
 print(__name__)
 if __name__ == "__main__":
