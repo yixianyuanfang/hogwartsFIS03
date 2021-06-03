@@ -8,7 +8,7 @@ def test_case():
     print("测试用例1")
 
 
-with open('../datas/datas.yml') as f:
+with open('datas/datas.yml') as f:
     # 读取配置文件
     datas = yaml.safe_load(f)
     # 加法计算参数
